@@ -1,0 +1,71 @@
+#########################################################################################
+# ficheros que no son tenidos en cuenta a la hora de ser comprobadas sus modificaciones #
+#########################################################################################
+
+######################
+# FICHEROS CONCRETOS #
+######################
+local.properties
+default.properties
+project.properties
+proguard.cfg
+tmp/*
+.classpath
+
+############################
+# DIRECTORIOS
+##########################
+/bin/res/*
+/gen/*
+
+###########
+# BACKUPS #
+###########
+*~
+*.bak
+
+
+###################
+# CODIGO COMPILADO #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.dex
+*.cache
+
+
+############
+# PAQUETES #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.ap_
+*.apk
+
+#########################
+# LOGS Y BASES DE DATOS #
+#########################
+*.log
+*.sql
+*.sqlite
+
+######################
+# GENERADOS POR OS   #
+######################
+.DS_Store
+._.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
