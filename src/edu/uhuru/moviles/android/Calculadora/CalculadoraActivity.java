@@ -91,13 +91,13 @@ public class CalculadoraActivity extends Activity {
 		_b2.setOnClickListener(lsBoton);
 		_b3.setOnClickListener(lsBoton);
 		_b4.setOnClickListener(lsBoton);
-		_b5.setOnClickListener(lsBoton);
+		_b5.setOnClickListener(lsBoton)
 		_b6.setOnClickListener(lsBoton);        
 		_b7.setOnClickListener(lsBoton);
 		_b8.setOnClickListener(lsBoton);
 		_b9.setOnClickListener(lsBoton);
 		_b0.setOnClickListener(lsBoton);
-		
+				
 		_bMas.setOnClickListener(lsBotonOperacion);
 		_bMenos.setOnClickListener(lsBotonOperacion);
 		_bMultiplicar.setOnClickListener(lsBotonOperacion);
@@ -105,9 +105,9 @@ public class CalculadoraActivity extends Activity {
 		_bIgual.setOnClickListener(lsBotonOperacion);
         
         _bC.setOnClickListener(new View.OnClickListener() {
-			
+	
         	@Override
-			public void onClick(View arg0) {
+        	public void onClick(View arg0) {
 				_edit.setText("0");
 				_nuevoValor = true;
 				_operacion = -1;
@@ -128,7 +128,7 @@ public class CalculadoraActivity extends Activity {
     private void opera()
     {  	
     	switch (_operacion)
-		{
+    	{
     	case -1:
     		_valor = Integer.parseInt(_edit.getText().toString());
     		break;
