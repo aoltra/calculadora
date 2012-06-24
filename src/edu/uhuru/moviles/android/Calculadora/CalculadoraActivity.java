@@ -34,7 +34,8 @@ public class CalculadoraActivity extends Activity {
 	private boolean _nuevoValor = true;
 	
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) 
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
@@ -70,49 +71,48 @@ public class CalculadoraActivity extends Activity {
 			}
 		};
 		
-		 View.OnClickListener lsBotonOperacion = new View.OnClickListener() {
+		View.OnClickListener lsBotonOperacion = new View.OnClickListener() {
 				
-				@Override
-				public void onClick(View arg0) {
-					opera();
-					_operacion = 0;
-					_nuevoValor = true;
-					String text = ((Button)arg0).getText().toString();
-					if (text.equals("+")) _operacion = 0;
-					if (text.equals("-")) _operacion = 1;
-					if (text.equals("*")) _operacion = 2;
-					if (text.equals("/")) _operacion = 3;
-					if (text.equals("=")) _operacion = -1;
-				}
-			};
+			@Override
+			public void onClick(View arg0) {
+				opera();
+				_operacion = 0;
+				_nuevoValor = true;
+				String text = ((Button)arg0).getText().toString();
+				if (text.equals("+")) _operacion = 0;
+				if (text.equals("-")) _operacion = 1;
+				if (text.equals("*")) _operacion = 2;
+				if (text.equals("/")) _operacion = 3;
+				if (text.equals("=")) _operacion = -1;
+			}
+		};
         
 		_b1.setOnClickListener(lsBoton);        
-	    _b2.setOnClickListener(lsBoton);
-	    _b3.setOnClickListener(lsBoton);
-	    _b4.setOnClickListener(lsBoton);
-	    _b5.setOnClickListener(lsBoton);
-        _b6.setOnClickListener(lsBoton);        
-        _b7.setOnClickListener(lsBoton);
-        _b8.setOnClickListener(lsBoton);
-        _b9.setOnClickListener(lsBoton);
-        _b0.setOnClickListener(lsBoton);
-        
-        _bMas.setOnClickListener(lsBotonOperacion);
-        _bMenos.setOnClickListener(lsBotonOperacion);
-        _bMultiplicar.setOnClickListener(lsBotonOperacion);
-        _bDividir.setOnClickListener(lsBotonOperacion);
-        _bIgual.setOnClickListener(lsBotonOperacion);
+		_b2.setOnClickListener(lsBoton);
+		_b3.setOnClickListener(lsBoton);
+		_b4.setOnClickListener(lsBoton);
+		_b5.setOnClickListener(lsBoton);
+		_b6.setOnClickListener(lsBoton);        
+		_b7.setOnClickListener(lsBoton);
+		_b8.setOnClickListener(lsBoton);
+		_b9.setOnClickListener(lsBoton);
+		_b0.setOnClickListener(lsBoton);
+		
+		_bMas.setOnClickListener(lsBotonOperacion);
+		_bMenos.setOnClickListener(lsBotonOperacion);
+		_bMultiplicar.setOnClickListener(lsBotonOperacion);
+		_bDividir.setOnClickListener(lsBotonOperacion);
+		_bIgual.setOnClickListener(lsBotonOperacion);
         
         _bC.setOnClickListener(new View.OnClickListener() {
 			
-			@Override
+        	@Override
 			public void onClick(View arg0) {
 				_edit.setText("0");
 				_nuevoValor = true;
 				_operacion = -1;
 			}
 		});
-        
        
     }
     
